@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "b8BKYPm0elnPooBsY8UleRCZYVMMmZQfF3jB3Uwj+D4=",
+  "Source": "Host",
+  "BasePath": "_content/Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Host\\wwwroot",
+      "Source": "Host",
+      "ContentRoot": "F:\\Programming\\C#\\ExampleWebApi\\Example\\wwwroot\\",
+      "BasePath": "_content/Host",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
