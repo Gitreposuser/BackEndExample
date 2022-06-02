@@ -10,6 +10,7 @@ namespace Host.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -27,12 +28,13 @@ namespace Host.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Manga>>> GetAll([FromQuery]MangaFilterModel filterParameters, [FromQuery] PaginationModel pagination)
+        public async Task<ActionResult<IEnumerable<Manga>>> GetAll([FromQuery]MangaFilterModel filterParameters, 
+            [FromQuery] PaginationModel pagination)
         {
             _logger.LogInformation("Get all manga");
             var filterExpression = _filterBuilder.BuildExpression(filterParameters);
             var itemsCount = await _repository.CountAsync(filterExpression);
-            if (itemsCount == 0) 
+            if (itemsCount == 0)
             { 
                 return NoContent();
             }
